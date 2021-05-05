@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+    
+  client:
+    container_name: client
+    build: ./client
+    restart: "always"
+    volumes:
+      - ./client/:/client/
+      - /app/node_modules/
+    env_file:
+      - ./common.env
+      - ./client.env
+    ports: 
+      - 3000:3000
+    # If you want to access this container via proxy container, 
+    # remove the 'ports' option above and use 'expose' option
+    #expose:
+    #  - 3000
