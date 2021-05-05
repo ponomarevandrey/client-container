@@ -1,0 +1,9 @@
+# Docker volumes
+build/
+dist/
+node_modules/
+
+*.code-workspace
+package-lock.json
+
+
